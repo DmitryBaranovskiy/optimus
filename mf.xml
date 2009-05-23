@@ -1,0 +1,192 @@
+<microformats>
+    <vcard type="compound" name="hcard">
+        <adr many="many" type="adr"/>
+        <agent many="many" couldbe="vcard"/>
+        <bday type="date"/>
+        <class type="text"/>
+        <category rel="tag" many="many"/>
+        <email many="many" type="email">
+            <type many="many" values="internet,x400,pref"/>
+            <value many="manyasone" type="text"/>
+        </email>
+        <fn mandatory="yes" type="text"/>
+        <geo type="geo"/>
+        <key many="many"/>
+        <label many="many"/>
+        <logo many="many" type="image"/>
+        <mailer many="many"/>
+        <n>
+            <additional-name many="many" type="text"/>
+            <family-name many="many" type="text"/>
+            <given-name many="many" type="text"/>
+            <honorific-prefix many="many" type="text"/>
+            <honorific-suffix many="many" type="text"/>
+        </n>
+        <nickname many="many" type="text"/>
+        <note many="manyasone" type="text" separator=" "/>
+        <org many="many">
+            <organization-name type="text"/>
+            <organization-unit many="many" type="text"/>
+        </org>
+        <photo many="many" type="image"/>
+        <rev type="text"/>
+        <role type="text"/>
+        <sort-string type="text"/>
+        <sound many="many"/>
+        <title many="many" type="text"/>
+        <tel many="many" type="text">
+            <type many="many" values="home,msg,work,pref,voice,fax,cell,video,bbs,modem,car,isdn,pcs"/>
+            <value many="manyasone" separator="" type="text"/>
+        </tel>
+        <tz type="text"/>
+        <uid type="text"/>
+        <url type="url" many="many"/>
+    </vcard>
+    <vcalendar type="compound" many="many">
+        <vevent many="many" type="vevent"/>
+    </vcalendar>
+    <vevent type="compound" name="hcalendar">
+        <category rel="tag" many="many"/>
+        <class type="text"/>
+        <description type="text"/>
+        <dtend type="date"/>
+        <dtstamp type="date"/>
+        <dtstart type="date" mandatory="yes"/>
+        <duration type="date"/>
+        <geo type="geo"/>
+        <last-modified type="date"/>
+        <location couldbe="vcard|adr|geo"/>
+        <status type="text"/>
+        <summary mandatory="yes" type="text" many="manyasone" separator=" "/>
+        <uid type="text"/>
+        <url type="url"/>
+    </vevent>
+    <hfeed type="compound" name="hatom">
+        <tag attribute="rel" many="many"/>
+        <hentry many="many" type="hentry"/>
+    </hfeed>
+    <hentry type="compound">
+        <author type="vcard" many="many" mandatory="yes"/>
+        <bookmark attribute="rel" mandatory="yes" type="url"/>
+        <tag attribute="rel" many="many"/>
+        <entry-title mandatory="yes" type="text"/>
+        <entry-content many="manyasone" separator=" " type="text"/>
+        <entry-summary many="manyasone" separator=" " type="text"/>
+        <published type="date"/>
+        <updated mandatory="yes" type="date"/>
+    </hentry>
+    <hreview type="compound">
+        <best/>
+        <description type="text"/>
+        <dtreviewed type="date"/>
+        <item mandatory="yes" couldbe="vcard|vevent">
+            <fn mandatory="yes"/>
+            <photo type="image"/>
+            <url type="url"/>
+        </item>
+        <license attribute="rel"/>
+        <permalink/>
+        <rating/>
+        <reviewer type="vcard"/>
+        <summary type="text"/>
+        <tag attribute="rel" many="many"/>
+        <type/>
+        <version/>
+        <worst/>
+    </hreview>
+    <hlisting type="compound">
+        <description type="text" mandatory="yes"/>
+        <dtexpired type="date"/>
+        <dtlisted type="date"/>
+        <item couldbe="vcard|vevent">
+            <adr type="adr"/>
+            <fn mandatory="yes"/>
+            <geo type="geo"/>
+            <photo type="image"/>
+            <url type="url"/>
+        </item>
+        <lister mandatory="yes" type="vcard"/>
+        <permalink type="url"/>
+        <price type="text"/>
+        <summary type="text"/>
+        <tag attribute="rel" many="many" />
+        <version/>
+    </hlisting>
+    <haudio type="compound">
+        <album mandatory="yes" type="text"/>
+        <category couldbe="tag" many="many"/>
+        <contributor type="vcard" many="many"/>
+        <description type="text" many="manyasone"/>
+        <duration type="date"/>
+        <enclosure attribute="rel" many="many" type="url"/>
+        <item many="many" type="haudio"/>
+        <payment attribute="rel" many="many" type="url"/>
+        <photo type="image" many="many"/>
+        <position type="number"/>
+        <price type="text"/>
+        <published type="date" many="many"/>
+        <sample attribute="rel" many="many" type="url"/>
+        <title mandatory="yes" type="text"/>
+    </haudio>
+    <xfolkentry type="compound">
+        <taggedlink mandatory="yes"/>
+        <description many="many" type="text"/>
+        <tag attribute="rel" many="many"/>
+    </xfolkentry>
+    <hresume type="compound">
+        <affiliation type="vcard" many="many"/>
+        <contact type="vcard" mandatory="yes"/>
+        <education type="vevent" many="many"/>
+        <experience type="vevent" many="many"/>
+        <publication type="citation" many="many"/>
+        <skill many="many"/>
+        <summary/>
+    </hresume>
+    <adr type="compound">
+        <country-name type="text"/>
+        <extended-address many="many" type="text"/>
+        <locality type="text"/>
+        <post-office-box type="text"/>
+        <postal-code type="text"/>
+        <region type="text"/>
+        <street-address many="many" type="text"/>
+        <type many="many" values="dom,intl,postal,parcel,home,work,pref"/>
+    </adr>
+    <geo type="compound">
+        <latitude/>
+        <longitude/>
+    </geo>
+    <xfn type="elemental">
+        <acquaintance attribute="rel" many="many"/>
+        <child attribute="rel" many="many"/>
+        <co-resident attribute="rel" many="many"/>
+        <co-worker attribute="rel" many="many"/>
+        <colleague attribute="rel" many="many"/>
+        <contact attribute="rel" many="many"/>
+        <crush attribute="rel" many="many"/>
+        <date attribute="rel" many="many"/>
+        <friend attribute="rel" many="many"/>
+        <kin attribute="rel" many="many"/>
+        <me attribute="rel" many="many"/>
+        <met attribute="rel" many="many"/>
+        <muse attribute="rel" many="many"/>
+        <neighbor attribute="rel" many="many"/>
+        <parent attribute="rel" many="many"/>
+        <spouse attribute="rel" many="many"/>
+        <sweetheart attribute="rel" many="many"/>
+    </xfn>
+    <votelinks type="elemental">
+        <vote-abstain attribute="rev" many="many"/>
+        <vote-against attribute="rev" many="many"/>
+        <vote-for attribute="rev" many="many"/>
+    </votelinks>
+    <rel-tag type="elemental">
+        <tag attribute="rel" many="many"/>
+    </rel-tag>
+    <rel-nofollow type="elemental">
+        <nofollow attribute="rel" many="many"/>
+    </rel-nofollow>
+    <rel-license type="elemental">
+        <license attribute="rel" many="many"/>
+    </rel-license>
+</microformats>
