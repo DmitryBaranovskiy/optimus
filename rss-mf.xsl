@@ -39,7 +39,17 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </description>
-                        <pubDate><xsl:value-of select="published/@date"/></pubDate>
+                        <xsl:variable name="pubDate">
+                            <xsl:choose>
+                                <xsl:when test="published/@date">
+                                    <xsl:value-of select="published/@date"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="updated/@date"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:variable>
+                        <pubDate><xsl:value-of select="$pubDate"/></pubDate>
                         <guid isPermaLink="false">
                             <xsl:value-of select="bookmark/@href"/>
                             <xsl:value-of select="published/@date"/>
